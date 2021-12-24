@@ -11,45 +11,24 @@
     </head>
         
     <style>
-         
         body {
-           background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
-           height: 140vh;
-          }
-            .contenedor {
-            margin-top: 120px !important;
-            background: skyblue; 
-            opacity: 0.8;
-            
+            background: rgb(220,195,248);
+            background: radial-gradient(circle, rgba(220,195,248,1) 0%, rgba(195,193,244,1) 100%);
+            height: 100vh;
         }
-    
-        .contenedor:hover {
-            background: blue; 
-            opacity: 0.8;
-            }
-        
-        
-        
-         label {
-              color: white;
-              text-transform: uppercase;
-              font-size: 12px;
-              
+        label {
+            color: rgb(0, 0, 0);
+            font-size: 15px;
           }
-          
-         .borde:hover {
-              border: 1.5px solid darkblue;
-          }
-        
-         
-         .container {
-              display: flex;
-              justify-content: center !important;
-              align-items: center !important;
+        .container-fluid {
+            display: flex;
+            justify-content: center !important;
+            align-items: center !important;
          }
-    
+         .btn {
+             margin-top: 20px;
+         }
       </style>
-    
     
     <body>
         
@@ -62,50 +41,43 @@
         resultado = alumno.mostrarAlumno(mid);
        
         %>
-                      
-     
-     <div class="container">
-             <div class="row d-flex justify-content-center shadow p-3 mb-5 rounded mt-5 col-sm-8 col-md-8 col-lg-6 contenedor">
-                <form class=" p-5" action="AlumnosController?accion=actualizar" method="POST">
+                  
+     <div class="container-fluid">
+             <div class="row de-flex justify-content-center">
+                <form class="p-5" action="AlumnosController?accion=actualizar" method="POST">
                   <div class="text-center">
-                    <img src="https://img.icons8.com/ios-glyphs/50/ffffff/refresh--v2.png"/>
+                    <img src="https://img.icons8.com/material/100/000000/rename--v1.png"/>
                   </div>
-                    <h1 class="mt-3 text-center text-uppercase fs-3 text-white">Modificar registro</h1>
-                
-
-                    <div class="mb-3">
+                    <h1 class="mt-3 mb-4 text-center text-black fs-3">Modificar registro</h1>
+                    <div class="mb-4">
                         <label for="id" class="form-label"></label>
                         <input type="hidden" class="form-control borde"  id="id" name="id"  value="<%= resultado.getId()%>" />
                     </div>
-                    
-                    <div class="mb-3">
+                    <div class="mb-4">
                         <label for="nombre" class="form-label">Nombre</label>
                         <input type="text" class="form-control borde" id="nombre" name="nombre"  value="<%= resultado.getNombre()%>" />
                     </div>
-                     <div class="mb-3">
+                     <div class="mb-4">
                         <label for="apellido" class="form-label">Apellido</label>
                         <input type="text" class="form-control borde" id="apellido" name="apellido" value="<%= resultado.getApellido()%>"/>
                     </div>
-                     <div class="mb-3">
+                     <div class="mb-4">
                         <label for="email" class="form-label">Email</label>
                         <input type="text" class="form-control borde" id="email" name="email" value="<%= resultado.getEmail()%>" />
                     </div>
-                     <div class="mb-3">
-                        <label for="telefono" class="form-label">Telefono</label>
+                     <div class="mb-4">
+                        <label for="telefono" class="form-label">Teléfono</label>
                         <input type="text" class="form-control borde" id="telefono" name="telefono" value="<%= resultado.getTelefono()%>" />
                     </div>
-                    
-                    <button type="submit" class="btn btn-primary text-white botonAModificar">Actualizar              
-                    </button>
-                    
+                    <div class="d-grid gap-2 col-6 mx-auto">
+                        <button class="btn btn-outline-dark botonModificar" type="submit">Actualizar</button>
+                    </div>
                 </form>
-                
-            </div>
+             </div>
             </div>
     
     <!-- JavaScript Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
     </body>
-        
 </html>

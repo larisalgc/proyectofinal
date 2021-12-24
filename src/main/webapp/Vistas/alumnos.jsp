@@ -12,47 +12,40 @@
     </head>
     
     <style>
-        
        body {
-          background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
-      
+            background: rgb(220,195,248);
+            background: radial-gradient(circle, rgba(220,195,248,1) 0%, rgba(195,193,244,1) 100%);
+            height: 100vh;
         }
-          
-      
         .table {
             border-collapse: separate;
         }
-        
-       table tbody tr:nth-child(odd) {
-	background:#eaf2f8;
-        
-       }
+        table tbody tr:nth-child(odd) {
+	        background: #e9eaeb;
+        }
         table tbody tr:nth-child(even) {
-	background:  #d4e6f1;
-        
+	        background: #313f4d;
+        }
+        .lista {
+            font-size: 30px;
         }
     </style>
-    
-    
     <body>
        <div class="container"> 
-            <div class="row d-flex">
-                                                
-                <div class="mt-5 titulo">
-                    <h1 class="mt-5 text-white text-center">Lista de Alumnos</h1>
-                </div>
-                
-                <div class="mt-5 text-end"><a class="" href="AlumnosController?accion=nuevo"><button type="button" class="btn btn-success text-white text-uppercase">Agregar nuevo</button></a>
+            <div class="row d-flex">                   
+                <div class="mt-5 titulo text-center">
+                    <img src="https://img.icons8.com/material/100/000000/rows.png"/>
+                    <h1 class="mt-3 text-black text-center lista">Lista de alumnos</h1>
+                </div>  
+            <div class="mt-5 text-end"><a class="" href="AlumnosController?accion=nuevo"><button type="button" class="btn btn-outline-dark">Agregar datos</button></a>
                  </div>
-  
-                <table class="table">
-                                                                                             
-                    <thead class="encabezado bg-info text-center text-white text-uppercase">
+                <table class="table">                                                     
+                    <thead class="encabezado table-light text-center text-black">
                         <th>Id</th>
                         <th>Nombre</th>
                         <th>Apellido</th>
                         <th>Email</th>
-                        <th>Telefono</th>
+                        <th>Teléfono</th>
                         <th>Modificar</th>
                         <th>Eliminar</th>
                         </thead>
